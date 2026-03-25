@@ -8,6 +8,11 @@
     --web-width: 80em;
 }
 
+::selection {
+  color: white;
+  background: orange;
+}
+
 /* Shared classes */
 .fixed-width {
     width: 75em;
