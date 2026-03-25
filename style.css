@@ -38,7 +38,7 @@ body {
     width: 100%;
     padding: 1.2em 0;
     font-weight: 100;
-    position: fixed;
+    position: sticky;
     background: white;
 }
 
@@ -83,4 +83,75 @@ nav div:nth-child(3) img:hover {
     transform: scale(110%);
     transition: 0.1s;
     cursor: pointer;
+}
+
+#first-page {
+    width: 100%;
+    height: 30em;
+    background: #cf2929;
+    background: linear-gradient(90deg, rgba(207, 41, 41, 1) 0%, rgba(255, 128, 0, 1) 50%, rgba(237, 221, 83, 1) 100%);
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#first-page h1 {
+    font-size: 4em;
+}
+
+#first-page p {
+    font-size: 1.5em;
+}
+
+#first-page button {
+    margin-top: 1em;
+    padding: 0.7em 2em;
+    border-radius: 10px;
+    color: white;
+    border: solid 3px white;
+    font-size: 1.1em;
+    cursor: pointer;
+    background-color: transparent;
+    transition: 0.1s;
+}
+
+#first-page button:hover {
+    transition: 0.1s;
+    background: white;
+    color: orange;
+    /* transform: scale(105%, 95%); */
+}
+
+#first-page button:active {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+#products-h1 {
+    margin: 1em 0 0.5em 0;
+    text-align: center;
+    font-size: 5em;
+    font-weight: 100;
+}
+
+#products-nav {
+    text-align: center;
+}
+
+#products-nav a {
+    font-size: 1.5em;
+    margin: 0 2em;
+    font-weight: 100;
+    transition: 0.1s;
+}
+
+#products-nav a:hover {
+    text-shadow: 0.5px 0 0 black, -0.5px 0 0 black;
+    transition: 0.1s;
+}
+
+#products-nav:hover > :not(:hover)  {
+    opacity: 0.4;
+    transition: 0.1s;
 }
