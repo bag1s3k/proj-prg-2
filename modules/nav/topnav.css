@@ -1,0 +1,50 @@
+#nav-container {
+    width: 100%;
+    padding: 1.2em 0;
+    font-weight: 100;
+    position: sticky;
+    background: white;
+}
+
+#nav-container h1 {
+    font-weight: 100;
+}
+
+#nav-container nav {
+    justify-content: space-between;
+}
+
+nav div:nth-child(1) img {
+    height: 2em;
+    margin-right: 5px;
+}
+
+#hrefs a {
+    margin: 1em;
+    font-size: 1.2em;
+    transition: 0.1s;
+}
+
+#hrefs a:hover {
+    color: orange;
+    transition: 0.1s;
+}
+
+nav div:nth-child(3) img:nth-child(1) {
+    height: 2.5em;
+    margin-right: 10px;
+}
+
+nav div:nth-child(3) img:nth-child(2) {
+    height: 2em;
+}
+
+nav div:nth-child(3) img {
+    transition: 0.1s;
+}
+
+nav div:nth-child(3) img:hover {
+    transform: scale(110%);
+    transition: 0.1s;
+    cursor: pointer;
+}
