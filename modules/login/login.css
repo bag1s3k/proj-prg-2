@@ -1,0 +1,79 @@
+@import "../../global.css";
+
+:root {
+    --radius-box: 20px;
+    --radius-items: 10px;
+}
+
+input[type="text"]::selection,
+input[type="password"]::selection {
+    background: rgb(48, 48, 48);
+    color: white;
+}
+
+input[type="text"],
+input[type="password"] {
+    transition: 0.2s;
+    outline-color: rgb(133, 133, 133);
+}
+
+.login-container {
+    border-radius: var(--radius-box);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding-bottom: 1em;
+}
+
+.login-container h1 {
+    font-size: 3em;
+    background: var(--gradient);
+    padding: 1em 4em;
+    border-radius: var(--radius-box) var(--radius-box) 0 0;
+    color: white;
+}
+
+.login-container form {
+    margin: 2em 1em;
+}
+
+.input-field {
+    border: none;
+    background-color: rgb(228, 228, 228);
+    font-size: 1em;
+    border-radius: var(--radius-items);
+    padding: 1em 7em 1em 1em;
+    margin: 0.3em 0;
+}
+
+.sign-in {
+    width: 100%;
+    background: var(--gradient);
+    color: white;
+    cursor: pointer;
+    margin-top: 1em;
+    padding: 1em;
+}
+
+input[type="text"]:hover,
+input[type="password"]:hover {
+    outline: auto;
+    transition: 0.2s;
+    outline-color: rgb(133, 133, 133);
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    outline: none;
+}
+
+.login-container p {
+    color: grey;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.login-container a {
+    color: rgb(233, 151, 0);
+    font-weight: 600;
+    display: table;
+    margin: auto;
+}

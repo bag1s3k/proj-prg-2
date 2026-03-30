@@ -1,50 +1,10 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-:root {
-    --card-radius: 15px;
-}
-
-::selection {
-  color: white;
-  background: orange;
-}
-
-/* Shared classes */
-.fixed-width {
-    width: 75em;
-}
-
-.center-flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.href-clean {
-    text-decoration: none;
-    color: black;
-}
-
-/* specific styles */
-html {
-    width: 100%;
-    height: 100%;
-}
-
-body {
-    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    padding-bottom: 10em;
-}
+@import "global.css";
 
 #first-page {
     width: 100%;
     height: 30em;
     background: #cf2929;
-    background: linear-gradient(90deg, rgba(207, 41, 41, 1) 0%, rgba(255, 128, 0, 1) 50%, rgba(237, 221, 83, 1) 100%);
+    background: var(--gradient);
     text-align: center;
     color: white;
     display: flex;

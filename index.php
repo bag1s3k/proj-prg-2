@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="modules/nav/topnav.css">
+    <link rel="stylesheet" href="modules/login/login.css">
+
     <link rel="icon" href="images/icons/favicon.png" type="image/x-icon">
 
     <title>Lendly</title>
@@ -28,8 +32,8 @@
         <a class="href-clean" href="http://">Precision Sports</a>
     </nav>
 
-    <div id="cards-container" class="center-flex">
-        <div class="card fixed-width">
+    <div id="cards-container" class="center-flex fixed-width">
+        <div class="card">
             <img src="images/sports-images/soccer-ball.jpg" alt="soccer ball">
             <div id="description">
                 <h2>Soccer ball</h2>
