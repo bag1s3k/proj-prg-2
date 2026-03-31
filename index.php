@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="modules/nav/topnav.css">
     <link rel="stylesheet" href="modules/login/login.css">
 
@@ -20,7 +19,7 @@
         <div>
             <h1>Premium Quality Products</h1>
             <p>Discover our exclusive collection of sports equipment to borrow</p>
-            <button>Explore</button>
+            <a href="#products-h1" class="href-clean">Explore</a>
         </div>
     </div>
 
@@ -48,5 +47,9 @@
             </div>
         </div>
     </div>
+
+    <footer style="height: 50em;background:grey">
+        <h1>Fotter</h1>
+    </footer>
 </body>
 </html>
