@@ -18,7 +18,7 @@
 
 #first-page p {
     font-size: 1.5em;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
 }
 
 #first-page a {
@@ -32,14 +32,14 @@
     transition: 0.1s;
 }
 
-#first-page button:hover {
+#first-page a:hover {
     transition: 0.1s;
     background: white;
     color: orange;
     /* transform: scale(105%, 95%); */
 }
 
-#first-page button:active {
+#first-page a:active {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
@@ -136,4 +136,49 @@
 
 .card #bottom button p {
     font-size: 1.5em;
+}
+
+footer {
+    background-color: rgb(37, 37, 37);
+    padding: 5em 0;
+    margin: 5em 0;
+    color: white;
+}
+
+footer h1 {
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+footer #hrefs {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer #hrefs a {
+    color: white;
+}
+
+footer h2 {
+    margin: 3em 0 1em 0;
+    text-align: center;
+}
+
+#socials {
+    display: flex;
+    justify-content: center;
+}
+
+footer img {
+    height: 1.5em;
+    margin: 0 0.6em;
+}
+
+footer p {
+    margin-top: 4em;
+    color: rgb(141, 141, 141);
+    text-align: center;
 }
