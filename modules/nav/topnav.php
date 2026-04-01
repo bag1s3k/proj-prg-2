@@ -27,7 +27,7 @@
         </div>
 
         <div class="nav-icons center-flex">
-            <a href="<?php echo url('modules/cart/cart.php'); ?>">
+            <a href="<?php echo url('modules/account/account.php'); ?>">
                 <img src="<?php echo url('images/icons/shopping-cart.png'); ?>" alt="Cart" class="cart-icon">
             </a>
             <a href="<?php echo url('modules/account/account.php'); ?>">

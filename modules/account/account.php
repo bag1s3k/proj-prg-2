@@ -33,10 +33,10 @@
                     <p><?php echo $_SESSION["email"]; ?></p>
                 </div>
             </div>
-            <a href="<?php echo url("modules/logout/logout.php") ?>" class="btn-logout">Odhlásit se</a>
+            <a href="<?php echo url("modules/logout/logout.php") ?>" class="btn-logout">Sign Out</a>
         </section>
 
-        <h1 class="section-title">Moje aktuální výpůjčky</h1>
+        <h1 class="section-title">My current borrows</h1>
 
         <div class="products-grid">
             <article class="card">
@@ -50,5 +50,7 @@
             </article>
         </div>
     </main>
+
+    <?php include "../footer/footer.php"; ?>
 </body>
 </html>
