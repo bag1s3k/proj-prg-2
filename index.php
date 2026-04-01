@@ -1,14 +1,19 @@
+<?php 
+    require_once "config.php"; 
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="modules/nav/topnav.css">
-    <link rel="stylesheet" href="modules/login/login.css">
+    <link rel="stylesheet" href="<?php echo url('style.css'); ?>">
+    <link rel="stylesheet" href="<?php echo url('modules/nav/topnav.css'); ?>">
+    <link rel="stylesheet" href="<?php echo url('modules/login/login.css'); ?>">
 
-    <link rel="icon" href="images/icons/favicon.png" type="image/x-icon">
+    <link rel="icon" href="<?php echo url('images/icons/favicon.png'); ?>" type="image/x-icon">
 
     <title>Lendly</title>
 </head>
@@ -33,14 +38,14 @@
 
     <div id="cards-container" class="center-flex fixed-width">
         <div class="card">
-            <img src="images/sports-images/soccer-ball.jpg" alt="soccer ball">
+            <img src="<?php echo url('images/sports-images/soccer-ball.jpg'); ?>" alt="soccer ball">
             <div id="description">
                 <h2>Soccer ball</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus molestias</p>
                 <div id="bottom">
                     <p>50 KČ/h</p>
                     <button class="center-flex">
-                        <img src="images/icons/shopping-cart.png">
+                        <img src="<?php echo url('images/icons/shopping-cart.png'); ?>">
                         <p>Add</p>
                     </button>
                 </div>
@@ -48,7 +53,7 @@
         </div>
     </div>
 
-    <footer>
+    <footer id="footer">
         <h1>Lendly</h1>
         <div id="hrefs">
             <a href="#" class="href-clean">About</a>
