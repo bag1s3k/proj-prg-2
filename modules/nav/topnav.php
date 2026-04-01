@@ -28,7 +28,7 @@
                     if (!isset($_SESSION["login"]) || $_SESSION["login"] !== true) {
                         echo "Log In";
                     } else {
-                        echo "Admin";
+                        echo $_SESSION["username"];
                     }
                 ?>
             </a>

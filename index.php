@@ -25,10 +25,10 @@
 
     <h1 id="products-h1">Products</h1>
     <nav id="products-nav" class="">
-        <a class="href-clean" href="http://">Team Sports</a>
-        <a class="href-clean" href="http://">Individual Sports</a>
-        <a class="href-clean" href="http://">Endurance Sports</a>
-        <a class="href-clean" href="http://">Precision Sports</a>
+        <a class="href-clean" href="#">Team Sports</a>
+        <a class="href-clean" href="#">Individual Sports</a>
+        <a class="href-clean" href="#">Endurance Sports</a>
+        <a class="href-clean" href="#">Precision Sports</a>
     </nav>
 
     <div id="cards-container" class="center-flex fixed-width">

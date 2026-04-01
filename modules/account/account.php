@@ -15,7 +15,7 @@
     <title>Account Settings</title>
 </head>
 <body>
-    <h1>Vítejte v nastavení účtu</h1>
+    <h1>Welcome <?php echo $_SESSION["username"]; ?></h1>
     <p>Tento obsah vidí pouze přihlášení uživatelé.</p>
     <a href="../../index.php">Zpět na hlavní stránku</a><br>
     <a href="../logout/logout.php">Log out</a>
