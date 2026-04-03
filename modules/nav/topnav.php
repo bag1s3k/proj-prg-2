@@ -1,11 +1,7 @@
 <?php
-    // Navbar potřebuje config, aby mohl generovat cesty
-    // Ale ten je obvykle už načten v hlavním souboru. Pro jistotu ho načteme, pokud není.
     if (!defined('BASE_URL')) {
         require_once dirname(__DIR__, 2) . "/config.php";
     }
-
-    // Session by měla běžet už z hlavního souboru, ale pro jistotu:
     if (session_status() === PHP_SESSION_NONE) {
         session_start();
     }

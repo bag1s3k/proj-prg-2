@@ -3,7 +3,9 @@
         define('BASE_URL', '/');
     }
 
-    // Pomocná funkce pro generování cest
+    require_once "connection.php";
+    require_once "functions.php";
+
     function url($path) {
         return BASE_URL . ltrim($path, '/');
     }

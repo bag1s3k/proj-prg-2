@@ -1,7 +1,13 @@
-<?php 
+<?php
     session_start();
-    session_unset();
-    session_destroy();
-    header("Location: ../../index.php");
-    exit();
+    require_once "../../config.php";
+
+    if (isset($_SESSION["user_id"])) {
+        unset($_SESSION["user_id"]);
+        unset($_SESSION["username"]);
+        unset($_SESSION["login"]);
+    }
+
+    header("Location: " . url("index.php"));
+    die;
 ?>

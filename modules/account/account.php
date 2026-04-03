@@ -1,11 +1,8 @@
 <?php
-    require_once "../../config.php";
     session_start();
+    require_once "../../config.php";
 
-    if (!isset($_SESSION["login"]) || $_SESSION["login"] !== true) {
-        header("Location: " . url('modules/login/login.html'));
-        exit();
-    }
+    $user_data = check_login($con);
 ?>
 
 <!DOCTYPE html>
@@ -27,10 +24,10 @@
         
         <section class="profile-section">
             <div class="profile-info">
-                <div class="avatar"><?php echo strtoupper($_SESSION["username"][0]); ?></div>
+                <div class="avatar"><?php echo strtoupper(htmlspecialchars($user_data["username"][0])); ?></div>
                 <div class="profile-details">
-                    <h2><?php echo $_SESSION["username"]; ?></h2>
-                    <p><?php echo $_SESSION["email"]; ?></p>
+                    <h2><?php echo htmlspecialchars($user_data["username"]); ?></h2>
+                    <p><?php echo htmlspecialchars($user_data["email"]); ?></p>
                 </div>
             </div>
             <a href="<?php echo url("modules/logout/logout.php") ?>" class="btn-logout">Sign Out</a>

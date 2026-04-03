@@ -1,5 +1,5 @@
-<?php 
-    require_once "config.php"; 
+<?php
+    require_once "config.php";
     session_start();
 ?>
 
@@ -11,7 +11,6 @@
     
     <link rel="stylesheet" href="<?php echo url('style.css'); ?>">
     <link rel="stylesheet" href="<?php echo url('modules/nav/topnav.css'); ?>">
-    <link rel="stylesheet" href="<?php echo url('modules/login/login.css'); ?>">
 
     <link rel="icon" href="<?php echo url('images/icons/favicon.png'); ?>" type="image/x-icon">
 
