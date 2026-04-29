@@ -49,23 +49,20 @@
         <a class="href-clean" href="#">Precision Sports</a>
     </nav>
 
-    <div id="cards-container" class="center-flex fixed-width">
+    <div id="cards-container" class="products-grid fixed-width">
         <?php if ($result && mysqli_num_rows($result) > 0): ?>
             <?php while($row = mysqli_fetch_assoc($result)): ?>
-                <div class="card">
-                    <img src="<?php echo htmlspecialchars($row["image_url"]); ?>">
-                    <div id="description">
-                        <h2><?php echo htmlspecialchars($row['title']); ?></h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus molestias</p>
-                        <div id="bottom">
-                            <p>50 KČ/h</p>
-                            <button class="center-flex">
-                                <img src="<?php echo url('images/icons/shopping-cart.png'); ?>">
-                                <p>Add</p>
-                            </button>
-                        </div>
+                <article class="card">
+                    <img src="<?php echo htmlspecialchars($row["image_url"]); ?>" class="card-img">
+                    <div class="card-body">
+                        <h3 class="card-title"><?php echo htmlspecialchars($row['title']); ?></h3>
+                        <p class="card-desc"><?php echo htmlspecialchars($row['description']); ?></p>
+                        <button class="btn-return center-flex" style="gap: 8px;">
+                            <img src="<?php echo url('images/icons/shopping-cart.png'); ?>" style="height: 1.2em; filter: brightness(0) invert(1);">
+                            Add
+                        </button>
                     </div>
-                </div>
+                </article>
             <?php endwhile; ?>
         <?php else: ?>
             <p>Žádné produkty k zobrazení.</p>
