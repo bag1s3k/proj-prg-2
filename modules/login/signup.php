@@ -20,7 +20,8 @@
             } else {
                 $query = "INSERT INTO users (username, email, password, date) VALUES (?, ?, ?, NOW())";
                 $stmt = mysqli_prepare($con, $query);
-                mysqli_stmt_bind_param($stmt, "sss", $username, $email, $password);
+                $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+                mysqli_stmt_bind_param($stmt, "sss", $username, $email, $hashed_password);
                 mysqli_stmt_execute($stmt);
 
                 header("Location: " . url("modules/login/login.php?success=Account created successfully!"));
