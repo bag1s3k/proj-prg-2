@@ -17,7 +17,7 @@
 
         <div id="hrefs">
             <a class="href-clean" href="<?php echo url('index.php#products-h1'); ?>">Products</a>
-            <a class="href-clean" href="<?php echo url('modules/account/account.php'); ?>">Borrowed</a>
+            <a class="href-clean" href="<?php echo url('modules/account/account.php#borrows-navigation'); ?>">Borrowed</a>
             <a class="href-clean" href="<?php echo url("index.php#footer"); ?>">Contact</a>
             <a class="href-clean" href="<?php echo url('modules/account/account.php'); ?>">Notifications</a>
         </div>

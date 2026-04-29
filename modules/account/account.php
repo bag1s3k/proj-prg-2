@@ -39,7 +39,7 @@
             }
         ?>
 
-        <h1 class="section-title">My current borrows</h1>
+        <h1 class="section-title" id="borrows-navigation">My current borrows</h1>
 
         <div class="products-grid">
             <article class="card">
