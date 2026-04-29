@@ -1,3 +1,19 @@
+<?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_id'])) {
+        $delete_id = $_POST['delete_id'];
+        $del_query = "DELETE FROM products WHERE id = ?";
+        $stmt = mysqli_prepare($con, $del_query);
+        mysqli_stmt_bind_param($stmt, "i", $delete_id);
+        mysqli_stmt_execute($stmt);
+        // Refresh stránky, aby zmizel smazaný produkt
+        header("Location: account.php");
+        die;
+    }
+
+    $query = "SELECT * FROM products ORDER BY id DESC";
+    $result = mysqli_query($con, $query);
+?>
+
 <style>
     .admin-header {
         display: flex;
@@ -89,12 +105,22 @@
     </div>
 
     <div class="product-list">
-        <div class="product-row">
-            <div class="product-info">
-                <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80&w=600" alt="Zrcadlovka" class="row-img">
-                <h3 class="row-title">Zrcadlovka</h3>
-            </div>
-            <button class="btn-delete">Odebrat</button>
-        </div>
+        <?php if ($result && mysqli_num_rows($result) > 0): ?>
+            <?php while($row = mysqli_fetch_assoc($result)): ?>
+                <div class="product-row">
+                    <div class="product-info">
+                        <img src="<?php echo htmlspecialchars($row['image_url']); ?>" alt="Product" class="row-img">
+                        <h3 class="row-title"><?php echo htmlspecialchars($row['title']); ?></h3>
+                    </div>
+                    
+                    <form method="POST" onsubmit="return confirm('Opravdu odstranit?');">
+                        <input type="hidden" name="delete_id" value="<?php echo $row['id']; ?>">
+                        <button type="submit" class="btn-delete">Odebrat</button>
+                    </form>
+                </div>
+            <?php endwhile; ?>
+        <?php else: ?>
+            <p>Žádné produkty k zobrazení.</p>
+        <?php endif; ?>
     </div>
 </div>
