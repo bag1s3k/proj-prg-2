@@ -33,6 +33,12 @@
             <a href="<?php echo url("modules/logout/logout.php") ?>" class="btn-logout">Sign Out</a>
         </section>
 
+        <?php 
+            if ($_SESSION["username"] === "admin") {
+                include "admin_account.php";
+            }
+        ?>
+
         <h1 class="section-title">My current borrows</h1>
 
         <div class="products-grid">
@@ -46,6 +52,7 @@
                 </div>
             </article>
         </div>
+        
     </main>
 
     <?php include "../footer/footer.php"; ?>
