@@ -59,6 +59,7 @@
     margin: 0 2em;
     font-weight: 100;
     transition: 0.1s;
+    cursor: default;
 }
 
 #products-nav a:hover {
