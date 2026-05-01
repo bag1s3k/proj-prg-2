@@ -3,6 +3,25 @@
     require_once "../../config.php";
 
     $user_data = check_login($con);
+    $user_id = $_SESSION['user_id']; 
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['return_id'])) {
+        $return_id = $_POST['return_id'];
+
+        $return_query = "UPDATE products SET available = 0 WHERE id = ? AND available = ?";
+        $stmt_return = mysqli_prepare($con, $return_query);
+        mysqli_stmt_bind_param($stmt_return, "ii", $return_id, $user_id);
+        mysqli_stmt_execute($stmt_return);
+
+        header("Location: " . basename($_SERVER['PHP_SELF']));
+        die;
+    }
+
+    $borrow_query = "SELECT * FROM products WHERE available = ?";
+    $stmt = mysqli_prepare($con, $borrow_query);
+    mysqli_stmt_bind_param($stmt, "i", $user_id);
+    mysqli_stmt_execute($stmt);
+    $borrowed_result = mysqli_stmt_get_result($stmt);
 ?>
 
 <!DOCTYPE html>
@@ -42,15 +61,26 @@
         <h1 class="section-title" id="borrows-navigation">My current borrows</h1>
 
         <div class="products-grid">
-            <article class="card">
-                <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80&w=600" alt="Zrcadlovka" class="card-img">
-                <div class="card-body">
-                    <h3 class="card-title">Kamera Sony Alpha</h3>
-                    <p class="card-desc">Profesionální bezzrcadlovka včetně objektivu 24-70mm a náhradní baterie.</p>
-                    <div class="expiration">⏳ Vyprší za: 3 dny</div>
-                    <button class="btn-return">Vrátit produkt</button>
-                </div>
-            </article>
+            <?php if ($borrowed_result && mysqli_num_rows($borrowed_result) > 0): ?>
+                
+                <?php while($row = mysqli_fetch_assoc($borrowed_result)): ?>
+                    <article class="card">
+                        <img src="<?php echo htmlspecialchars($row["image_url"]); ?>" alt="<?php echo htmlspecialchars($row["title"]); ?>" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title"><?php echo htmlspecialchars($row['title']); ?></h3>
+                            <p class="card-desc"><?php echo htmlspecialchars($row['description']); ?></p>
+                            
+                            <form method="POST">
+                                <input type="hidden" name="return_id" value="<?php echo $row['id']; ?>">
+                                <button type="submit" class="btn-return">Vrátit produkt</button>
+                            </form>
+                        </div>
+                    </article>
+                <?php endwhile; ?>
+
+            <?php else: ?>
+                <p>Currently you don't have any borrowed products</p>
+            <?php endif; ?>
         </div>
         
     </main>
