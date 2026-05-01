@@ -52,7 +52,7 @@
     <div id="cards-container" class="products-grid fixed-width">
         <?php if ($result && mysqli_num_rows($result) > 0): ?>
             <?php while($row = mysqli_fetch_assoc($result)): ?>
-                <article class="card">
+                <article class="card <?php if ($row['available'] > 0) { echo 'product-unavailable'; } ?>">
                     <img src="<?php echo htmlspecialchars($row["image_url"]); ?>" class="card-img">
                     <div class="card-body">
                         <h3 class="card-title"><?php echo htmlspecialchars($row['title']); ?></h3>

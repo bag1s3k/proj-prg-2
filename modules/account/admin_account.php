@@ -15,6 +15,8 @@
 ?>
 
 <style>
+    @import "../../global.css";
+
     .admin-header {
         display: flex;
         justify-content: space-between;
@@ -107,7 +109,7 @@
     <div class="product-list">
         <?php if ($result && mysqli_num_rows($result) > 0): ?>
             <?php while($row = mysqli_fetch_assoc($result)): ?>
-                <div class="product-row">
+                <div class="product-row <?php if ($row['available'] > 0) { echo 'product-unavailable'; } ?>">
                     <div class="product-info">
                         <img src="<?php echo htmlspecialchars($row['image_url']); ?>" alt="Product" class="row-img">
                         <h3 class="row-title"><?php echo htmlspecialchars($row['title']); ?></h3>

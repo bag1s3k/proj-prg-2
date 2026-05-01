@@ -8,7 +8,7 @@
         $image_url = $_POST["image_url"] ?? "";
 
         if (!empty($title) && !empty($description) && !empty($image_url)) {
-            $query = "INSERT INTO products (title, description, image_url, available) VALUES (?, ?, ?, 1)";
+            $query = "INSERT INTO products (title, description, image_url, available) VALUES (?, ?, ?, 0)";
             $stmt = mysqli_prepare($con, $query);
             mysqli_stmt_bind_param($stmt, "sss", $title, $description, $image_url);
 
