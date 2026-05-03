@@ -6,14 +6,13 @@
     left: 0;
     z-index: 1000;
     background: white;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Jemný stín pod navbarem */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 #nav-container nav {
     justify-content: space-between;
 }
 
-/* Logo část */
 .nav-logo div img {
     height: 2.5em;
     margin-right: 10px;
@@ -24,7 +23,6 @@
     font-size: 2.2em;
 }
 
-/* Odkazy uprostřed */
 #hrefs a {
     margin: 0 1.2em;
     font-size: 1.2em;
@@ -36,7 +34,6 @@
     color: orange;
 }
 
-/* Ikony vpravo (košík, účet) */
 .nav-icons {
     gap: 1.5em;
 }

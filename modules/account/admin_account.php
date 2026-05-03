@@ -5,7 +5,6 @@
         $stmt = mysqli_prepare($con, $del_query);
         mysqli_stmt_bind_param($stmt, "i", $delete_id);
         mysqli_stmt_execute($stmt);
-        // Refresh stránky, aby zmizel smazaný produkt
         header("Location: account.php");
         die;
     }
