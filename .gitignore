@@ -4,3 +4,5 @@ connection.php
 
 __pycache__/
 .venv/
+
+.env
