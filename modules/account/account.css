@@ -171,3 +171,7 @@ body {
 .btn-return:hover {
     background-color: var(--primary-hover);
 }
+
+#borrows-navigation {
+    scroll-margin-top: 4em;
+}
