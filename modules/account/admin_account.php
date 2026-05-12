@@ -9,7 +9,7 @@
         die;
     }
 
-    $query = "SELECT * FROM products ORDER BY id DESC";
+    $query = "SELECT products.*, users.username FROM products LEFT JOIN users ON products.available = users.id ORDER BY products.id DESC";
     $result = mysqli_query($con, $query);
 ?>
 
@@ -112,6 +112,7 @@
                     <div class="product-info">
                         <img src="<?php echo htmlspecialchars($row['image_url']); ?>" alt="Product" class="row-img">
                         <h3 class="row-title"><?php echo htmlspecialchars($row['title']); ?></h3>
+                        <p><?php echo $row['username'] ? htmlspecialchars($row['username']) : ""; ?></p>
                     </div>
                     
                     <form method="POST" onsubmit="return confirm('Opravdu odstranit?');">
