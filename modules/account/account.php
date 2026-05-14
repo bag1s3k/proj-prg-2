@@ -32,6 +32,7 @@
 
     <link rel="stylesheet" href="<?php echo url('style.css'); ?>">
     <link rel="stylesheet" href="account.css">
+    <link rel="stylesheet" href="admin_account.css">
     <link rel="stylesheet" href="<?php echo url('modules/nav/topnav.css'); ?>">
 
     <title>Account Settings</title>
