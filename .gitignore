@@ -1,6 +1,5 @@
 .vscode/
 .idea/
-connection.php
 
 __pycache__/
 .venv/
