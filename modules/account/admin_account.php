@@ -18,7 +18,7 @@
 <div class="admin-container">
     <div class="admin-header">
         <h2>Products management</h2>
-        <a href="add_product.php" class="btn-add">+ Přidat produkt</a>
+        <a href="add_product.php" class="btn-add">+ Add product</a>
     </div>
 
     <div class="product-list">
@@ -33,7 +33,7 @@
                     
                     <form method="POST" onsubmit="return confirm('Opravdu odstranit?');">
                         <input type="hidden" name="delete_id" value="<?php echo $row['id']; ?>">
-                        <button type="submit" class="btn-delete">Odebrat</button>
+                        <button type="submit" class="btn-delete">Remove</button>
                     </form>
                 </div>
             <?php endwhile; ?>
