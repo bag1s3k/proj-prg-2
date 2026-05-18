@@ -73,7 +73,7 @@
                             
                             <form method="POST">
                                 <input type="hidden" name="return_id" value="<?php echo $row['id']; ?>">
-                                <button type="submit" class="btn-return">Vrátit produkt</button>
+                                <button type="submit" class="btn-return">Return product</button>
                             </form>
                         </div>
                     </article>
