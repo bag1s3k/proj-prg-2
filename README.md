@@ -43,7 +43,7 @@ The project is intended for **demonstration and educational purposes only** and 
 
 - **PHP**: The core back-end language used for dynamic content generation and database communication.
 - **CSS**: Used for styling
-- **Python**: A helper script utilized for adding products to database. Instead of inserting products manually via raw `SQL` (which bypasses PHP validation), I wrote a simple web-scraping/automation script powered by `BeautifulSoup4` (`bs4`)
+- **Python**: A helper [script](./add_products/) utilized for adding products to database. Instead of inserting products manually via raw `SQL` (which bypasses PHP validation), I wrote a simple web-scraping/automation script powered by `BeautifulSoup4` (`bs4`)
 
 ## Project Structure
 
